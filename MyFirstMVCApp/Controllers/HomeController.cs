@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using MyFirstMVCApp.Models;
 
 namespace MyFirstMVCApp.Controllers
 {
@@ -27,7 +28,8 @@ namespace MyFirstMVCApp.Controllers
 
         public ViewResult Result(int startDate, int endDate)
         {
-            return View();
+            List<Person> people = Person.GetPersons(startDate, endDate);
+            return View(people);
         }
     }
 }

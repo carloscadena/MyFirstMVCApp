@@ -18,7 +18,7 @@ namespace MyFirstMVCApp.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
-        public static List<Person> GetPersons(int begYear, int endYear)
+        public static List<Person> GetPersons(int startDate, int endDate)
         {
             List<Person> people = new List<Person>();
             string path = Environment.CurrentDirectory;
@@ -42,7 +42,8 @@ namespace MyFirstMVCApp.Models
                 });
             }
 
-            List<Person> listofPeople = people.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
+            List<Person> listofPeople = people.Where(p => (p.Year >= startDate) && (p.Year <= endDate)).ToList();
             return listofPeople;
         }
+    }
 }
