@@ -1,0 +1,9 @@
+﻿@model List<MyFirstMVCApp.Models.Person>
+
+<p>Hello @{var name = "Amanda";} @name</p>
+
+@foreach (var item in Model)
+{
+    <h3>@item.Name</h3>
+    <h4>Age: @item.Age </h4>
+}
