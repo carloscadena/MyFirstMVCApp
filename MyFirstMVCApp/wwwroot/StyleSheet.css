@@ -1,0 +1,15 @@
+﻿body {
+    text-align: center;
+    width: 65%;
+    border: 50px solid red;
+    margin: 0 auto;
+}
+
+td {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 1000%;
+    color: red;
+}
